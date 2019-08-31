@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sh /etc/motd.dynamic/header
+
+sh /etc/motd.dynamic/help_text
+
+sh /etc/motd.dynamic/system_info
