@@ -18,11 +18,11 @@ load15=$(cat /proc/loadavg | awk '{print $3}')
 process_count=$(ps aux | wc -l)
 
 # Memory Usage
-mem_usage=$(free -mh | grep '^Mem' | awk '{print int($3/($2)*100)"%"}')
+mem_usage=$(free -m | grep '^Mem' | awk '{print int($3/($2)*100)"%"}')
 mem_used=$(free -mh | grep '^Mem' | awk '{print $3}')
 mem_free=$(free -mh | grep '^Mem' | awk '{print $7}')
 mem_count=$(free -mh | grep '^Mem' | awk '{print $2}')
-swap_usage=$(free -mh | grep '^Swap' | awk '{  print $2 == "0B" ? "0" : $3/($2)*100"%"}')
+swap_usage=$(free -m | grep '^Swap' | awk '{  print $2 == "0" ? "0" : $3/($2)*100"%"}')
 
 # System fs usage
 fs_size=$(df -h | awk '/^\/dev/{print $2}')
