@@ -2,7 +2,7 @@ date=$(date)
 head="System information as of: ${date}"
 
 # System uptime
-uptime=${cat /proc/uptime | cut -f1 -d.}
+uptime=$(cat /proc/uptime | cut -f1 -d.)
 up_days=$((uptime/60/60/24))
 up_hours=$((uptime/60/60%24))
 up_mins=$((uptime/60%60))
