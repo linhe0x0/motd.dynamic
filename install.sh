@@ -1,3 +1,5 @@
+#!/bin/sh
+
 set -e
 
 printf "\033[1;34m==>\033[0m Download latest scripts from GitHub\n"
